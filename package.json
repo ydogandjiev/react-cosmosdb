@@ -2,6 +2,15 @@
   "name": "react-cosmosdb",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ydogandjiev/react-cosmosdb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ydogandjiev/react-cosmosdb/issues"
+  },
+  "homepage": "https://github.com/ydogandjiev/react-cosmosdb#readme",
   "dependencies": {
     "adal-angular": "^1.0.17",
     "body-parser": "^1.17.2",
@@ -29,8 +38,7 @@
     "react-scripts": "1.1.4"
   },
   "scripts": {
-    "start":
-      "concurrently \"react-scripts start\" \"nodemon server/server.js\"",
+    "start": "concurrently \"react-scripts start\" \"nodemon server/server.js\"",
     "build": "react-scripts build && mv build server",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
