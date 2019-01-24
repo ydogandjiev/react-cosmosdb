@@ -1,26 +1,30 @@
 const mongoose = require("mongoose");
 
-const username = process.env.SQLCONNSTR_CosmosUsername;
-const password = process.env.SQLCONNSTR_CosmosPassword;
-const port = process.env.SQLCONNSTR_CosmosPort;
+const uri = process.env.SQLCONNSTR_DbUri;
+const username = process.env.SQLCONNSTR_DbUsername;
+const password = process.env.SQLCONNSTR_DbPassword;
 
 mongoose.Promise = global.Promise;
 
-const mongoUri = `mongodb://${username}.documents.azure.com:${port}/?ssl=true`;
-
 function connect() {
   return mongoose
-    .connect(mongoUri, {
-      auth: {
-        user: username,
-        password: password
-      },
-      config: {
-        autoIndex: false
+    .connect(
+      uri,
+      {
+        auth: {
+          user: username,
+          password: password
+        },
+        config: {
+          autoIndex: false
+        }
       }
+    )
+    .then(() => {
+      console.log(`Successfully connected to ${uri}`);
     })
     .catch(err => {
-      console.log(err);
+      console.error(err);
     });
 }
 

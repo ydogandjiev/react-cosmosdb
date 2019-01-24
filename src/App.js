@@ -53,7 +53,7 @@ class App extends Component {
           ) : (
             <div className="App-login">
               <div className="App-login-image-container">
-                <img className="App-login-image" src={logo} />
+                <img className="App-login-image" alt="React logo" src={logo} />
               </div>
               <div className="App-login-button-container">
                 <DefaultButton
