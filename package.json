@@ -10,7 +10,6 @@
   "bugs": {
     "url": "https://github.com/ydogandjiev/react-cosmosdb/issues"
   },
-  "homepage": "https://github.com/ydogandjiev/react-cosmosdb#readme",
   "dependencies": {
     "adal-angular": "^1.0.17",
     "body-parser": "^1.17.2",
